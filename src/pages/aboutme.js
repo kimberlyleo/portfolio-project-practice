@@ -16,10 +16,10 @@ const AboutMe = (props) => {
   return (
     <div>
       <Jumbotron >
-        <h1 className="display-3">hey babies!</h1>
-        <p className="lead">welcome to my portfolio</p>
+        <h1 className="display-3">Kimberly Leonard</h1>
+        <p className="lead">welcome to my portfolio:</p>
         <hr className="my-2" />
-        <p>code by babies, for babies</p>
+        <p>Full Stack Web Dev; Specializing in React.js on Rails</p>
       </Jumbotron>
     </div>
   )

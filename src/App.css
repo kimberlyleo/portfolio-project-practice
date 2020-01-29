@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+.card-img {
+  width: 100%;
+}
+
+.card-show {
+  max-width: 200px;
+}
+
+.cards-for-index {
+  max-width: 200px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

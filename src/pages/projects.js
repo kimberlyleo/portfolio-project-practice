@@ -1,31 +1,42 @@
 import React from 'react'
-import projectobjects from './project-objects.js';
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
+import {Link} from 'react-router-dom';
+import {
+  Container,
+  Card,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  Row,
+  Col
+} from 'reactstrap';
 
-
-
-const Projects = () => {
-  return (
-    <div>
-      <h1>Projects</h1>
+const Projects = (props) => {
+    return (
+      <Container>
         <div>
-          {this.projectobjects.map((project, index) => {
-            return (
-            <Card>
-              <CardImg top width="100%" src={project.image} alt="Card image cap" />
-              <CardBody>
-              <CardTitle>{project.name}</CardTitle>
-              <CardSubtitle>{project.description}</CardSubtitle>
-              <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-              <Button>Button</Button>
-              </CardBody>
-            </Card>
-          )
-          }
-          )}
-        </div>
-    </div>
-  )
+          <Row classname="justify-content">
+            <Col md="5">
+               {props.projects.map((project, index) => {
+                 return(
+                    <Card key={index} className="cards-for-index">
+                      <CardImg  className= "card-img" top width="100%" src={project.image} alt="Card image cap" />
+                      <CardBody>
+                      <CardTitle>{project.name}</CardTitle>
+                      <CardSubtitle>{project.description}</CardSubtitle>
+                      <Link to={"/projects/" + project.id}><Button>View More</Button></Link>
+                      </CardBody>
+                    </Card>
+                )
+              }
+              )}
+              </Col >
+              </Row>
+          </div>
+        </Container>
+
+      )
 
 };
 
